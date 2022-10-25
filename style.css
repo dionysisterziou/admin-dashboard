@@ -14,7 +14,7 @@ body {
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 4fr;
+  grid-template: 1fr 8fr / 1fr 4fr;
   background-color: blue;
   color: white;
   border-radius: 10px;
@@ -35,6 +35,9 @@ h1 {
 aside {
   grid-row: 2 / 3;
   display: grid;
+  align-content: center;
+  justify-content: start;
+  gap: 20px;
 }
 
 ul {
@@ -68,7 +71,7 @@ main>section header {
 .projects {
   display: grid;
   gap: 15px;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 img {
