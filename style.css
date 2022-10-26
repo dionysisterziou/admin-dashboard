@@ -74,10 +74,13 @@ ul {
   --target-size: 40px;
 
   height: var(--box-height);
+  pointer-events: none;
   position: relative;
+
 }
 
 .search-box svg {
+  fill: #f43f5e;
   bottom: var(--icon-vertical-margin);
   height: var(--icon-size);
   position: absolute;
@@ -100,8 +103,15 @@ ul {
 .search>div {
   align-items: center;
   display: flex;
-  flex-basis: 300px;
-  justify-content: space-between;
+  gap: 25px;
+  justify-content: center;
+}
+
+select {
+  background: none;
+  border: none;
+  color: var(--main-color);
+  pointer-events: none;
 }
 
 main>section header {
@@ -117,8 +127,10 @@ main>section header {
 }
 
 img {
-  height: 150px;
-  width: 150px;
+  border-radius: 50%;
+  height: 50px;
+  vertical-align: middle;
+  width: 50px;
 }
 
 h2 {
