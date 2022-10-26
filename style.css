@@ -128,8 +128,8 @@ main>section header {
 
 .projects {
   display: grid;
-  gap: 15px;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 img {
