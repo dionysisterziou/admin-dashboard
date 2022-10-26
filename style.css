@@ -1,6 +1,7 @@
 :root {
   --background-color: linear-gradient(to right, #be123c, #881337);
-  --container-color: linear-gradient(to right, #e11d48, #9f1239)
+  --container-color: linear-gradient(to right, #e11d48, #9f1239);
+  --main-color: #fff1f2;
 }
 
 html {
@@ -22,13 +23,13 @@ body {
   background: var(--background-color);
   display: grid;
   grid-template: 1fr 8fr / 1fr 4fr;
-  color: white;
+  color: var(--main-color);
   border-radius: 40px;
   padding: 15px 25px;
-  gap: 20px;
+  gap: 100px;
   height: calc(100vh - 16px);
   align-content: start;
-  border: 1px solid white
+  border: 1px solid var(--main-color);
 }
 
 .container>header {
@@ -40,17 +41,18 @@ h1 {
 }
 
 aside {
+  align-self: start;
   grid-row: 2 / 3;
   display: grid;
   align-content: center;
   justify-content: start;
-  gap: 20px;
+  gap: 40px;
 }
 
 .side-content {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 30px;
 }
 
 ul {
@@ -63,9 +65,36 @@ ul {
   justify-content: space-between;
 }
 
-input[type="search"] {
-  border-radius: 15px;
-  padding: 8px;
+.search-box {
+  --border-radius: calc(var(--box-height) / 2);
+  --box-height: var(--target-size);
+  --icon-size: calc(var(--box-height) * 3 / 4);
+  --icon-vertical-margin: calc((var(--box-height) - var(--icon-size)) / 2);
+  --side-margin: calc(var(--border-radius) / 2);
+  --target-size: 40px;
+
+  height: var(--box-height);
+  position: relative;
+}
+
+.search-box svg {
+  bottom: var(--icon-vertical-margin);
+  height: var(--icon-size);
+  position: absolute;
+  left: var(--side-margin);
+  top: var(--icon-vertical-margin);
+  width: var(--icon-size);
+}
+
+.search-box input[type="search"] {
+  appearance: none;
+  border: none;
+  border-radius: var(--border-radius);
+  height: 100%;
+  padding-left: calc(var(--side-margin) + var(--icon-size) + 4px);
+  padding-right: var(--side-margin);
+  outline: 0;
+  width: 260px;
 }
 
 .search>div {
@@ -90,4 +119,8 @@ main>section header {
 img {
   height: 150px;
   width: 150px;
+}
+
+h2 {
+  margin-top: 0;
 }
