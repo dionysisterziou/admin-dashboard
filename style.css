@@ -155,7 +155,7 @@ main>section header {
 .projects {
   display: grid;
   gap: 30px;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
 .projects article {
@@ -164,9 +164,9 @@ main>section header {
   justify-content: space-between;
 }
 
-/* .projects article p {
+.projects article p {
   margin-top: 0;
-} */
+}
 
 .box {
   background-color: #f43f5e;
