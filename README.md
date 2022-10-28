@@ -1,1 +1,3 @@
-# admin-dashboard
+# Admin Dashboard
+
+A full dashboard design.
