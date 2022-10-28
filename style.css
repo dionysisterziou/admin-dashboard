@@ -30,7 +30,6 @@ body {
   min-height: calc(100vh - 16px);
   padding: 15px 25px;
   gap: 25px;
-  /* height: calc(100vh - 16px); */
 }
 
 .container>header {
@@ -163,6 +162,9 @@ main>section header {
   background-color: #f43f5e;
   border-radius: 5px;
   box-shadow: 1px 2px 4px black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 20px;
 }
 
